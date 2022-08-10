@@ -9,20 +9,49 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
+    var viewModel: SplashViewModelContracts = SplashViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        configureContents()
+        viewModel.viewDidLoad()
+    }
+}
+
+// MARK: - ConfigureContents
+extension SplashViewController {
+    
+    private func configureContents() {
+        view.backgroundColor = .white
+        configureViewModel()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configureViewModel() {
+        viewModel.routes = self
+        viewModel.output = self
     }
-    */
+}
 
+
+// MARK: - SplashViewModelOutput
+extension SplashViewController: SplashViewModelOutput {
+    func showInternetError(message: String) {
+        let alertController = UIAlertController(title: "Connection Error", message: message, preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "Tekrar Dene", style: .default) { [weak self] _ in
+            guard let self = self else { return }
+            self.viewModel.retry()
+        }
+        alertController.addAction(confirmAction)
+        DispatchQueue.main.async {
+            self.present(alertController, animated: true)
+        }
+    }
+}
+
+// MARK: - SplashViewModelRoute
+extension SplashViewController: SplashViewModelRoute {
+    func presentHome() {
+        let viewController = HomeViewBuilder.make()
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }
