@@ -1,0 +1,12 @@
+//
+//  MoviesServices.swift
+//  lodos_case
+//
+//  Created by sercan kaya on 10.08.2022.
+//
+
+import Foundation
+
+protocol MoviesDataSources {
+    func getMovies(search: String, page: Int, completion: @escaping (Result<Movie, NetworkError>) -> Void)
+}
