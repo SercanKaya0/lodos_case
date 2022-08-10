@@ -13,7 +13,7 @@ protocol SplashViewModelContracts {
     var output: SplashViewModelOutput? { get set }
    
     func viewDidLoad()
-    func retry()
+    func titleLabelTapped()
 }
 
 // MARK: - Routes
@@ -24,4 +24,5 @@ protocol SplashViewModelRoute: AnyObject {
 //MARK: - Outputs
 protocol SplashViewModelOutput: AnyObject {
     func showInternetError(message: String)
+    func fetchRemoteConfigration()
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 final class SplashViewModel: SplashViewModelContracts {
-  
+
     weak var routes: SplashViewModelRoute?
     weak var output: SplashViewModelOutput?
     
@@ -16,8 +16,11 @@ final class SplashViewModel: SplashViewModelContracts {
         hasInternet()
     }
     
-    func retry() {
-        hasInternet()
+    func titleLabelTapped() {
+        DispatchQueue.main.asyncAfter(deadline: .now()) { [weak self] in
+            guard let self = self else { return }
+            self.routes?.presentHome()
+        }
     }
 }
 
@@ -26,7 +29,7 @@ extension SplashViewModel {
  
     private func hasInternet() {
         if Connectivity.isConnectedToInternet() {
-            routes?.presentHome()
+            output?.fetchRemoteConfigration()
         } else {
             output?.showInternetError(message: "NO INTERNET CONNECTION")
         }
