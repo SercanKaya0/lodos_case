@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		57A6749C28A3B66F00B30677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6749B28A3B66F00B30677 /* AppDelegate.swift */; };
-		57A6749E28A3B66F00B30677 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6749D28A3B66F00B30677 /* SceneDelegate.swift */; };
-		57A674A028A3B66F00B30677 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A6749F28A3B66F00B30677 /* ViewController.swift */; };
-		57A674A328A3B66F00B30677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A674A128A3B66F00B30677 /* Main.storyboard */; };
 		57A674A528A3B67200B30677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A674A428A3B67200B30677 /* Assets.xcassets */; };
 		57A674A828A3B67200B30677 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A674A628A3B67200B30677 /* LaunchScreen.storyboard */; };
 		57A674B328A3B67200B30677 /* lodos_caseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A674B228A3B67200B30677 /* lodos_caseTests.swift */; };
 		57A674BD28A3B67200B30677 /* lodos_caseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A674BC28A3B67200B30677 /* lodos_caseUITests.swift */; };
 		57A674BF28A3B67200B30677 /* lodos_caseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A674BE28A3B67200B30677 /* lodos_caseUITestsLaunchTests.swift */; };
+		57A674D028A3B7E900B30677 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A674CF28A3B7E900B30677 /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +36,6 @@
 /* Begin PBXFileReference section */
 		57A6749828A3B66F00B30677 /* lodos_case.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lodos_case.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A6749B28A3B66F00B30677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		57A6749D28A3B66F00B30677 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		57A6749F28A3B66F00B30677 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		57A674A228A3B66F00B30677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		57A674A428A3B67200B30677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57A674A728A3B67200B30677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57A674A928A3B67200B30677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +44,7 @@
 		57A674B828A3B67200B30677 /* lodos_caseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lodos_caseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A674BC28A3B67200B30677 /* lodos_caseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lodos_caseUITests.swift; sourceTree = "<group>"; };
 		57A674BE28A3B67200B30677 /* lodos_caseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lodos_caseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		57A674CF28A3B7E900B30677 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +95,9 @@
 		57A6749A28A3B66F00B30677 /* lodos_case */ = {
 			isa = PBXGroup;
 			children = (
-				57A6749B28A3B66F00B30677 /* AppDelegate.swift */,
-				57A6749D28A3B66F00B30677 /* SceneDelegate.swift */,
-				57A6749F28A3B66F00B30677 /* ViewController.swift */,
-				57A674A128A3B66F00B30677 /* Main.storyboard */,
-				57A674A428A3B67200B30677 /* Assets.xcassets */,
-				57A674A628A3B67200B30677 /* LaunchScreen.storyboard */,
+				57A674CD28A3B7C800B30677 /* AppDelegate */,
+				57A674CC28A3B72300B30677 /* Resource */,
+				57A674CB28A3B71C00B30677 /* Scenes */,
 				57A674A928A3B67200B30677 /* Info.plist */,
 			);
 			path = lodos_case;
@@ -125,6 +118,39 @@
 				57A674BE28A3B67200B30677 /* lodos_caseUITestsLaunchTests.swift */,
 			);
 			path = lodos_caseUITests;
+			sourceTree = "<group>";
+		};
+		57A674CB28A3B71C00B30677 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				57A674CE28A3B7D300B30677 /* Splash */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		57A674CC28A3B72300B30677 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				57A674A428A3B67200B30677 /* Assets.xcassets */,
+				57A674A628A3B67200B30677 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		57A674CD28A3B7C800B30677 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				57A6749B28A3B66F00B30677 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		57A674CE28A3B7D300B30677 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				57A674CF28A3B7E900B30677 /* SplashViewController.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +259,6 @@
 			files = (
 				57A674A828A3B67200B30677 /* LaunchScreen.storyboard in Resources */,
 				57A674A528A3B67200B30677 /* Assets.xcassets in Resources */,
-				57A674A328A3B66F00B30677 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57A674A028A3B66F00B30677 /* ViewController.swift in Sources */,
 				57A6749C28A3B66F00B30677 /* AppDelegate.swift in Sources */,
-				57A6749E28A3B66F00B30677 /* SceneDelegate.swift in Sources */,
+				57A674D028A3B7E900B30677 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +321,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		57A674A128A3B66F00B30677 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				57A674A228A3B66F00B30677 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		57A674A628A3B67200B30677 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -441,7 +457,6 @@
 				INFOPLIST_FILE = lodos_case/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +483,6 @@
 				INFOPLIST_FILE = lodos_case/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
