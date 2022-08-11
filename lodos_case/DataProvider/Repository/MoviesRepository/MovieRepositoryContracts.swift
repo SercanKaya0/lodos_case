@@ -9,4 +9,5 @@ import Foundation
 
 protocol MoviesRepositoryConracts {
     func getMovies(search: String, page: Int, completion: @escaping (Result<Movie, NetworkError>) -> Void)
+    func getMovieDetail(imdbId: String, completion: @escaping (Result<MovieMetaData, NetworkError>) -> Void)
 }
