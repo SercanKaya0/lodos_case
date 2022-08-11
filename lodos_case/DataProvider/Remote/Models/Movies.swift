@@ -10,11 +10,11 @@ import Foundation
 struct Movie: Decodable {
     
     let search: [Search]?
-      let totalResults, response: String?
-
-      enum CodingKeys: String, CodingKey {
-          case search = "Search"
-          case totalResults
-          case response = "Response"
-      }
+    let totalResults, response: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case search = "Search"
+        case totalResults
+        case response = "Response"
+    }
 }
